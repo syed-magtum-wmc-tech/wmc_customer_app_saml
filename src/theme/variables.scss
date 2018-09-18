@@ -1,0 +1,125 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:           #4a90e2,
+  header:            #4275a0,
+  menu:              #4b7ba4,
+  background:        #f7f7f7,
+  dark-background:   #f0f0f0,
+  select-background: #f1f1f1,
+  light-text:        #929292,
+  medium-text:       #70706e,
+  dark-text:         #4a4a4a,
+  legend-text:       #231f20,
+  light-border:      #d8d8d8,
+  border:            #e1e2e3,
+  card-border:       #c9c9c9,
+  select-border:     #d1d2d4,
+  card-shadow:       rgba(0,0,0,.3),
+  dark-border:       #9b9b9b,
+  table-header:      #e9e9e9,
+  message-reply:     rgba(74,144,226,.21),
+  green:             #79c12a,
+  red:               #ff0000,
+  white:             #ffffff,
+  black:             #000000
+);
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+$text-color:       #000;
+$background-color: #ffffff;
+
+$content-padding: 5px;
+$content-margin: 5px;
+
+// Input Variables
+
+$text-input-highlight-color-invalid: transparent;
+$text-input-highlight-color-valid: transparent;
+$text-input-show-invalid-highlight: transparent;
+$text-input-highlight-color: transparent;
+$text-input-show-valid-highlight: transparent;
+
+$text-input-md-margin-top: $content-padding;
+$text-input-md-margin-bottom: $content-padding;
+$text-input-md-margin-start: $content-padding;
+$text-input-md-margin-end: $content-padding;
+
+$item-padding-right: 0;
+$item-ios-padding-right: $item-padding-right;
+$item-md-padding-right: $item-padding-right;
+$item-wp-padding-right: $item-padding-right;
+
+$card-box-shadow: none;
+$card-ios-box-shadow: $card-box-shadow;
+$card-md-box-shadow: $card-box-shadow;
+$card-wp-box-shadow: $card-box-shadow;
+
+$toolbar-button-color: #70706e;
+$toolbar-ios-button-color: $toolbar-button-color;
+$toolbar-md-button-color: $toolbar-button-color;
+$toolbar-wp-button-color: $toolbar-button-color;
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionicons";
+@import "icons";
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

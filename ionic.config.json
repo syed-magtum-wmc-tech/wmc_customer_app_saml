@@ -1,0 +1,8 @@
+{
+  "name": "wheres-my-concrete",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "defaultBrowser": "google chrome"
+}

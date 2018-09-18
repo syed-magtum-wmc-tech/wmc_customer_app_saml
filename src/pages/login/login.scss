@@ -1,0 +1,68 @@
+page-login {
+
+  #content {
+    background: url('../assets/img/Login.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #grid-wrapper {
+    max-width: 500px;
+    margin: auto;
+    height: 100%;
+  }
+
+  #login-wrapper {
+    height: 100%;
+  }
+
+  #login-card-header {
+    padding-bottom: 5px;
+  }
+
+  #login-card {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    opacity: 0.93;
+  }
+
+  .form-input {
+    border: solid 1px color($colors, dark-border);
+    background-color: color($colors, white);
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  #login-button, #employee-login-button {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  #remember-me {
+    margin: 0;
+    padding: 0 10px 0 0;
+    display: block;
+  }
+
+  #remember-me-label {
+    color: color($colors, dark-text);
+    font-size: 16px;
+  }
+
+  #forgot-password {
+    color: color($colors, primary);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: right;
+  }
+
+  .backbut {
+    position: fixed !important;
+    font-size: 1.4em  !important;
+    z-index: 1 !important;
+  }
+}

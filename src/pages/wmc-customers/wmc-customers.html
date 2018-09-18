@@ -1,0 +1,84 @@
+<!--
+  Generated template for the WmcCustomersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header no-border>
+  <ion-navbar no-padding>
+    <menu-header [hideWeather]="true" ></menu-header>
+  </ion-navbar>
+   <ion-toolbar id="select-item" no-padding color="select-background">
+      <div *ngIf="(dates$ | async) as dates">
+        <div *ngIf="dates.length > 0">
+            <ion-select [(ngModel)]="selectedDateIndex" (ionChange)="selectDate(true)" [selectOptions]="selectOptions" id="select-drop-down" [disabled]="showLoading" >
+                <ion-option *ngFor="let date of dates[0].dates; let i = index;" [value]="i">{{date.display}}</ion-option>
+                <ion-option  value="100">Select Date Range</ion-option>
+            </ion-select>
+            <span class="date-range" *ngIf="selectedDateRange && selectedDateRange.startDate &&  selectedDateRange.endDate " (click)="chooseDateRange()">({{selectedDateRange.startDate | date : "MM-dd-yyyy"}} to {{selectedDateRange.endDate | date : "MM-dd-yyyy"}}) </span>
+        </div>
+      </div>
+    </ion-toolbar>
+    <ion-toolbar class="default-item" no-padding color="header">
+        <ion-grid no-padding>
+            <ion-row align-items-center no-padding *ngIf="(markets$ | async) as markets">
+              <ion-col col-12 text-center no-padding *ngIf="markets.length > 0">
+                <ion-label color="white" margin  >
+                  <span >Total : </span>
+                  {{summary.totalOrders | number:'1.0-0'}} Order<span *ngIf="summary.totalOrders > 1">s</span> 
+                </ion-label>
+                <ion-label color="white" margin  >
+                   {{ summary.completedYards  | number:'1.0-0' }} / {{summary.totalYards  | number:'1.0-0'}}
+                  </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content id="content">
+  <ion-grid no-padding>
+   <ion-row>
+      <ion-col>
+        
+        <div text-center padding-vertical *ngIf="showLoading">
+          <ion-spinner name="ios" padding-vertical></ion-spinner>
+        </div>
+        
+        <div id="market-list" *ngIf="(markets$ | async) as markets;">
+          <div *ngIf="markets.length > 0">
+             
+            <ion-card *ngFor="let market of markets"
+                    [class.market-card]="true" >
+
+                <div (click)="viewMarket(market)">
+                  <ion-row align-items-center>
+                      <progress max="{{market.markets[0].totalYards}}" value="{{market.markets[0].completedYards}}"></progress>
+                  </ion-row>
+
+                  <ion-row align-items-center>
+                    <ion-col col-7  offset-1>
+                      <ion-label id="card-label-market" color="white">{{ market.markets[0].name }}</ion-label>
+                      <ion-label id="card-label-yards"> {{ market.markets[0].completedYards | number:'1.0-0' }} / {{ market.markets[0].totalYards  | number:'1.0-0' }} {{ units['unit_'+market.index]}}</ion-label>
+                      <ion-label id="card-label-orders"> {{ market.markets[0].totalOrders  | number:'1.0-0' }} Orders</ion-label>
+                    </ion-col>
+                    <ion-col col-3 text-center >
+                        <weather-widget [mode]="'WmcCustomers'" [customerIndex]="market.index"></weather-widget>
+                    </ion-col>
+
+                    <ion-col col-1 text-center >
+                      <ion-icon name="icon-right-arrow-dark"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </div>
+
+              </ion-card>
+          </div>
+          
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

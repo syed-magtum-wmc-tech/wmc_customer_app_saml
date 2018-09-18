@@ -1,0 +1,24 @@
+<ion-toolbar no-padding>
+  <ion-grid no-padding>
+    <ion-row no-padding align-items-center id="header-row">
+      <ion-col col-4 text-left>
+        <ion-row no-padding no-margin align-items-center>
+          <button ion-button clear color="medium-text" icon-left menuToggle>
+            <ion-icon name="ios-menu" padding-right></ion-icon> Menu
+          </button>
+        </ion-row>
+      </ion-col>
+      <ion-col col-4 text-left>
+          <ion-row no-padding no-margin align-items-center>
+              <img src="assets/img/logo.jpg" class="logo-img" />
+          </ion-row>
+        </ion-col>
+      <ion-col col-4 text-right>
+        <ion-row no-padding align-items-center *ngIf="!hideWeather">
+          <ion-label color="medium-text" float-right no-margin>{{ weather?.temp }}</ion-label>
+          <img src="{{weather?.icon}}" />
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>

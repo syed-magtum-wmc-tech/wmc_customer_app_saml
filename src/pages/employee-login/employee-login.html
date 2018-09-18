@@ -1,0 +1,49 @@
+<ion-content id="content">
+
+    <ion-grid id="grid-wrapper">
+  
+      <!-- LOGIN card -->
+  
+      <ion-row justify-content-center align-items-center id="login-wrapper"><ion-col>
+        <ion-card id="login-card" color="dark-background" margin>
+  
+          <ion-card-header text-center id="login-card-header">
+            Login
+          </ion-card-header>
+  
+          <ion-card-content>
+  
+            <form>
+              <ion-list>
+  
+                <ion-row align-items-center>
+                  <ion-col col-1>
+                    <ion-checkbox name="rememberMe" id="remember-me" [(ngModel)]="account.rememberMe"></ion-checkbox>
+                  </ion-col>
+                  <ion-col col-5 no-padding>
+                    <ion-label id="remember-me-label" for="remember-me" padding-left>Remember me</ion-label>
+                  </ion-col>
+                </ion-row>
+
+                <div padding *ngIf="isApp">
+                    <button ion-button id="employee-login-button" block large (click)="doEmployeeLogin()"> EMPLOYEE LOGIN</button>
+                </div>
+
+                <ion-row align-items-center>
+                    <ion-col col-12 text-right no-padding>
+                      <ion-label id="forgot-password" (click)="showCustomerLogin()">Customer Login</ion-label>
+                    </ion-col>
+                </ion-row>
+
+                </ion-list>
+            </form>
+  
+          </ion-card-content>
+  
+        </ion-card>
+      </ion-col></ion-row>
+  
+  
+    </ion-grid>
+  
+  </ion-content>
