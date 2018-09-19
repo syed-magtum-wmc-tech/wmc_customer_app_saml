@@ -13,8 +13,15 @@
       
   </ion-header>
   
-  <ion-content id="content">
+  <ion-content id="content" padding >
   
-    <h2>Wmc Customer page</h2> 
+    <h2>Customer page</h2> 
+
+  <button ion-button (click)="navigatePage('MarketsPage')">Market Page</button>
+  <br/>
+  <button ion-button (click)="navigatePage('OrdersPage')">Order Page</button>
+  <br/>
+  <button ion-button (click)="navigatePage('UnderConstructionPage')">Map page</button>
+  <br/>
   
   </ion-content>

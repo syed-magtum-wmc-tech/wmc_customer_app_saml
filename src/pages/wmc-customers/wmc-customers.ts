@@ -25,4 +25,11 @@ export class WmcCustomersPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad UnderConstructionPage');
   }
+
+
+  navigatePage(page:string) {
+    
+    this.navCtrl.push(page)
+
+  }
 }

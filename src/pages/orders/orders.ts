@@ -14,6 +14,7 @@ export class OrdersPage implements OnInit, OnDestroy {
   ngOnInit(){
 
   }
+  
   ngOnDestroy(){
 
   }
@@ -21,4 +22,9 @@ export class OrdersPage implements OnInit, OnDestroy {
   ionViewDidLoad() {
     console.log('ionViewDidLoad UnderConstructionPage');
   }
+
+  navigatePage(page:string) {
+    this.navCtrl.push(page)
+  }
+
 }

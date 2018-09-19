@@ -3,7 +3,7 @@
     <name>Wheres My Concrete</name>
     <description>Wheres My Concrete Customer App</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.1.103:8106" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -89,7 +89,9 @@
     <plugin name="cordova-plugin-file-transfer" spec="~1.6.1" />
     <plugin name="cordova-plugin-inappbrowser" spec="~3.0.0" />
     <allow-navigation href="http://192.168.1.103:8100" />
+    <allow-navigation href="http://192.168.1.103:8107" />
+    <allow-navigation href="http://192.168.1.103:8105" />
+    <allow-navigation href="http://192.168.1.103:8106" />
     <engine name="android" spec="7.0.0" />
     <engine name="ios" spec="^4.5.5" />
-    <allow-navigation href="http://192.168.1.103:8107" />
 </widget>
