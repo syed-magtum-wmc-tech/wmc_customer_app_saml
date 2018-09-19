@@ -58,7 +58,7 @@ export class MyApp {
   externalPages: any[] = [{ title: 'Account Summary', component: 'UnderConstructionPage' }];
   logoutPage   : any[] = [{ title: 'Log Out', component: 'LoginPage' }]
 
-  internalSettingPages   : any[] = [{ title: 'Upload Image', component: 'WmcCustomerLogoPage' }]
+  internalSettingPages   : any[] = [{ title: 'Upload Image', component: 'UnderConstructionPage' }]
 
 
   constructor(public platform: Platform,

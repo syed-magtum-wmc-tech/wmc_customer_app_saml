@@ -1,0 +1,172 @@
+page-orders {
+
+  #content {
+    background-color: color($colors, background);
+  }
+
+  #content > div {
+    border: none;
+  }
+
+  #order-header {
+    height: 60px;
+    min-height: 0px;
+  }
+
+  .order-bar {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  #segment-bar {
+    margin: 20px 25px;
+  }
+
+  .segment-title {
+    font-size: 17px;
+  }
+
+  #ad-card {
+    border: solid 1px color($colors, card-border);
+  }
+
+  ion-card {
+    border: solid 1px color($colors, card-border);
+    border-top: none;
+  }
+
+  #view-map {
+    font-weight: 500;
+  }
+
+  .name-label {
+    font-size: 20px;
+  }
+
+  .details-label {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  #dispatch-label {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .dispatch-row {
+    padding: 10px 0 20px 0;
+  }
+
+  #cancel-order {
+    border-right: solid 1px color($colors, card-border);
+    border-top: solid 1px color($colors, card-border);
+  }
+
+  #confirm-order {
+    border-top: solid 1px color($colors, card-border);
+  }
+
+  progress {
+    background-color: white;
+    height: 5px;
+    width: 100%;
+  }
+
+  progress[value] {
+    -webkit-appearance: none;
+     appearance: none;
+  }
+
+  progress[value]::-webkit-progress-bar {
+    background-color: color($colors, light-border);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-color: color($colors, primary);
+    border-radius: 2px;
+  }
+
+  .completed-progress[value]::-webkit-progress-value {
+    background-color: color($colors, green);
+  }
+
+  .filter-menu {
+    .form-field {
+      margin:10px;
+      border: solid 1px #ccc;
+    }
+
+    .text-input {
+      height: 30px;
+    }
+
+    ion-select {
+      min-width: 98% !important;
+    }
+
+    ion-datetime {
+      min-width: 98% !important;
+    }
+
+    ion-label {
+      margin: 0px !important;
+      font-size: 1.1em !important;
+      color: #a3a3a3 !important;
+      padding-left: 10px !important;
+    }
+
+  }
+  .field-icon-wrapper,.field-with-label-icon-wrapper{
+    background: #f8f8f8;
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+  }
+
+  .field-with-label-icon-wrapper {
+    height: 42px;
+    top: 37px;
+   }
+
+   .field-with-label-icon-wrapper.date-picker {
+    z-index: 0 !important;
+   }
+  
+  .search-field-icon,.date-picker-icon {
+    position: relative;
+    top: 5px;
+    left: 6px;
+  }
+  
+  .select-icon {
+    width: 15px !important; 
+  }
+  
+  .progress {
+    width: 100%;
+    height: 5px;
+    margin-bottom: 0px;
+    background-color: #cacaca !important;
+  }
+  .progress-bar-onsite {
+    background-color: #444544 !important;
+  }
+  .progress-bar-in-transit {
+    background-color: #886ee7 !important;
+  }
+  .progress-bar-poured {
+    background-color: #adffff !important;
+  }
+
+  .error-message {
+    padding-left: 10px;
+    color: red;
+  }
+  //remainingColor: string = '#e1e2e3';
+
+}

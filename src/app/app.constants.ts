@@ -1,8 +1,5 @@
 export class Constants {
   
-  //public static readonly API_HOST: string = 'https://wmctraining.us-concrete.com';
-  //public static readonly API_HOST: string = 'https://wmc.us-concrete.com';
-  //public static readonly API_HOST: string = 'https://api.wheresmyconcrete.com';
   public static readonly API_HOST: string = 'https://apiprod.wheresmyconcrete.com';
 
   public static readonly MAX_YEAR:string = "2150"; 

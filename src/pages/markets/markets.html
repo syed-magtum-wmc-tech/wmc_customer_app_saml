@@ -1,71 +1,14 @@
 <ion-header no-border>
   <ion-navbar no-padding>
-    <menu-header></menu-header>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
   </ion-navbar>
-    <ion-toolbar id="select-item" no-padding color="select-background">
-      <div *ngIf="(dates$ | async) as dates">
-        <ion-select [(ngModel)]="selectedDate" (ionChange)="selectDate()" [selectOptions]="selectOptions" id="select-drop-down">
-          <ion-option *ngFor="let date of dates" [value]="date">{{date.display}}</ion-option>
-          <ion-option  value="100">Select Date Range</ion-option>
-        </ion-select>
-        <span class="date-range" *ngIf="selectedDateRange && selectedDateRange.display" (click)="chooseDateRange()">{{selectedDateRange.display}} </span>
-      </div>
-    </ion-toolbar>
-    <ion-toolbar class="default-item" no-padding color="header">
-        <ion-grid no-padding>
-            <ion-row align-items-center no-padding *ngIf="(markets$ | async) as markets">
-              <ion-col col-12 text-center no-padding *ngIf="markets.length > 0">
-                <ion-label color="white" margin  >
-                  <span >{{ markets[0].name }}: </span>
-                  {{ markets[0].totalOrders  | number:'1.0-0' }} Order<span *ngIf="markets[0].totalOrders > 1">s</span> 
-                </ion-label>
-                <ion-label color="white" margin  >
-                   {{ markets[0].completedYards | number:'1.0-0' }} / {{ markets[0].totalYards  | number:'1.0-0' }} {{units}}
-                  </ion-label>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-      </ion-toolbar>
- 
+    
 </ion-header>
 
 <ion-content id="content">
 
-  <ion-grid no-padding>
-   <ion-row>
-      <ion-col>
-        <div text-center padding-vertical *ngIf="showLoading">
-            <ion-spinner name="ios" padding-vertical></ion-spinner>
-        </div>
-       
-        <div id="market-list" *ngIf="(markets$ | async) as markets;">
-          <ion-card *ngFor="let market of markets; let isFirst = first"
-                    [class.header-card]="isFirst"
-                    [class.market-card]="!isFirst" [hidden]="isFirst">
-
-            <div (click)="viewRegions(market)">
-              <ion-row align-items-center>
-                  <progress max="{{market.totalYards}}" value="{{market.completedYards}}"></progress>
-              </ion-row>
-
-              <ion-row align-items-center>
-                <ion-col col-10  offset-1>
-                  <ion-label id="card-label-market" color="white">{{ market.name }}</ion-label>
-                  <ion-label id="card-label-yards"> {{ market.completedYards  | number:'1.0-0' }} / {{ market.totalYards  | number:'1.0-0'}} {{units}}</ion-label>
-                  <ion-label id="card-label-orders"> {{ market.totalOrders | number:'1.0-0' }} Orders</ion-label>
-                </ion-col>
-
-                <ion-col col-1 text-center *ngIf="market.id">
-                  <ion-icon name="icon-right-arrow-dark"></ion-icon>
-                </ion-col>
-              </ion-row>
-            </div>
-
-          </ion-card>
-        </div>
-      </ion-col>
-    </ion-row>
-
-  </ion-grid>
+  <h2>Market List page</h2> 
 
 </ion-content>

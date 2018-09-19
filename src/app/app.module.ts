@@ -11,7 +11,7 @@ import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 
-import { Api, User,  UtilServiceProvider, MarketProvider, WeatherProvider } from '../providers/providers';
+import { Api, User,  UtilServiceProvider } from '../providers/providers';
 
 import { MyApp } from './app.component';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
@@ -52,8 +52,6 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
     Transfer,
     FilePath,
     UtilServiceProvider,
-    MarketProvider,
-    WeatherProvider,
     InAppBrowser,
   
   ]
